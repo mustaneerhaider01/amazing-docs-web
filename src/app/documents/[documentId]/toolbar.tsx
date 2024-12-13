@@ -18,6 +18,11 @@ import { cn } from "@/lib/utils";
 import useEditorStore from "@/store/use-editor-store";
 import { Separator } from "@/components/ui/separator";
 import FontFamilyButton from "./font-family-button";
+import HeadingLevelButton from "./heading-level-button";
+import TextColorButton from "./text-color-button";
+import HighlightColorButton from "./highlight-color-button";
+import LinkButton from "./link-button";
+import ImageButton from "./image-button";
 
 interface ToolbarButtonProps {
   onClick?: () => void;
@@ -129,18 +134,18 @@ const Toolbar = () => {
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
       <FontFamilyButton />
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
-      {/* TODO: Heading */}
+      <HeadingLevelButton />
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
       {/* TODO: Font size */}
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
       {sections[1].map((item) => (
         <ToolbarButton key={item.label} {...item} />
       ))}
-      {/* TODO: Text color */}
-      {/* TODO: Highlight color */}
+      <TextColorButton />
+      <HighlightColorButton />
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
-      {/* TODO: Link */}
-      {/* TODO: Image */}
+      <LinkButton />
+      <ImageButton />
       {/* TODO: Align */}
       {/* TODO: Line Height */}
       {/* TODO: List */}
