@@ -19,6 +19,7 @@ import Image from "@tiptap/extension-image";
 import ImageResize from "tiptap-extension-resize-image";
 
 import useEditorStore from "@/store/use-editor-store";
+import { FontSizeExtension } from "@/app/extensions/font-size";
 
 const Editor = () => {
   const { setEditor } = useEditorStore();
@@ -57,6 +58,7 @@ const Editor = () => {
     },
     extensions: [
       StarterKit,
+      FontSizeExtension,
       TextAlign.configure({
         types: ["heading", "paragraph"],
       }),
