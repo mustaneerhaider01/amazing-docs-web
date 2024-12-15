@@ -23,6 +23,8 @@ import TextColorButton from "./text-color-button";
 import HighlightColorButton from "./highlight-color-button";
 import LinkButton from "./link-button";
 import ImageButton from "./image-button";
+import AlignButton from "./align-button";
+import ListButton from "./list-button";
 
 interface ToolbarButtonProps {
   onClick?: () => void;
@@ -146,9 +148,9 @@ const Toolbar = () => {
       <Separator orientation="vertical" className="h-6 bg-neutral-300" />
       <LinkButton />
       <ImageButton />
-      {/* TODO: Align */}
+      <AlignButton />
       {/* TODO: Line Height */}
-      {/* TODO: List */}
+      <ListButton />
       {sections[2].map((item) => (
         <ToolbarButton key={item.label} {...item} />
       ))}
