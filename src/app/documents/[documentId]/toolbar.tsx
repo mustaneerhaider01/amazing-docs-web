@@ -26,6 +26,7 @@ import ImageButton from "./image-button";
 import AlignButton from "./align-button";
 import ListButton from "./list-button";
 import FontSizeButton from "./font-size-button";
+import LineHeightButton from "./line-height-button";
 
 interface ToolbarButtonProps {
   onClick?: () => void;
@@ -150,7 +151,7 @@ const Toolbar = () => {
       <LinkButton />
       <ImageButton />
       <AlignButton />
-      {/* TODO: Line Height */}
+      <LineHeightButton />
       <ListButton />
       {sections[2].map((item) => (
         <ToolbarButton key={item.label} {...item} />
